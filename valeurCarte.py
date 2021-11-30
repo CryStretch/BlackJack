@@ -17,8 +17,3 @@ def valeurCarte(carte):
         nbCarte=int(carte[0]+carte[1])
 
     return nbCarte
-    
-
-
-carte="22 de carreau"
-print(valeurCarte(carte))
