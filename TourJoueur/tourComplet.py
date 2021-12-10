@@ -1,10 +1,11 @@
-def tourComplet(listeJoueur):
-    p=paquet()
+import tourJoueur
 
-    while len(listeJoueur)>0:
+def tourComplet(listeJoueur,dicoScore,p):
+    for j in listeJoueur:
+        print("La table Actuelle est :", dicoScore)
+        print("")
+        score=tourJoueur(j,p, dicoScore, listeJoueur)
+        dicoScore[j]=score
+        if score==21:
+            break
 
-        for e in listeJoueur:
-            total=tourJoueur(e)
-            
-            if total>21:
-                listeJoueur.remove(e)

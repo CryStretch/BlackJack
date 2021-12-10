@@ -1,7 +1,7 @@
-def piocheCarte(p,x):
+def piocheCarte(p,x=1):
     main=[]
-    for e in range(0,x):
+    for e in range(x):
         main.append(p[0])
-        p.pop(0)
-
+        p.pop(0)   
+ 
     return main

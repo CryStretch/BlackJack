@@ -1,21 +1,39 @@
-from continues import *
-def tourJoueur(j,p):
-    i=1
-    total=0 #à remplacer plus tard, pour l'instant c'est pour test la fonction
+from Paquet import piocheCarte, valeurCarte
+import continues
 
-    print("** tour :",i," "*6,"Joueur :",j," "*6,"main actuelle :",total,"**")
+def tourJoueur(j,paquet, dicoScores, listeJoueur):
+    score=dicoScores[j]
+
+    print("** tour .",1," "*6,"Joueur :",j," "*6,"main actuelle :", score,"**")
+    print("")
 
     condition=continues()
 
-
     if condition==True:
-        nb=piocheCarte(valeurCarte(p,1)) #1 valeur par déf on peut mettre variable que l'on demande à l'utilisateur
-        total=nb+total
-        return total
+        carte=piocheCarte(paquet,1)
+        nb=valeurCarte(carte[0])
+        score=nb+score
 
-    #if total>21 or condition==False:
-        #listeJoueur.remove(j)
-        #return listeJoueur
-        
+        if score==21:
+            print("")
+            return score
 
-            
+        elif score>21:
+            listeJoueur.remove(j)
+            print("perdant",listeJoueur)
+            print ("Vous avez dépassé 21 vous avez perdu")
+            print("")
+            return score
+
+
+        else:
+            print ("Votre nouvelle main est :",score)
+            print("")
+            return score
+
+    else:
+        print("coucher",listeJoueur)
+        listeJoueur.remove(j)
+        print ("Vous avez décidé de vous coucher")
+        print("")
+        return score
