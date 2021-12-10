@@ -6,5 +6,3 @@ def partieFinie(listeJoueur,dicoScores):
         else:
             cond=False
     return cond
-
-#manque condition pour arreter partie immédiatment quand joueur à 21

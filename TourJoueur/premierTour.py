@@ -7,9 +7,13 @@ def premierTour(joueurs,p):
     for e in joueurs:
         listeCarte=piocheCarte(p,2)
 
-        Vcarte1=valeurCarte(listeCarte[0])
-        Vcarte2=valeurCarte(listeCarte[1])
+        Vcarte1=valeurCarte(listeCarte[0],e)
+        Vcarte2=valeurCarte(listeCarte[1],e)
         S=Vcarte1+Vcarte2
+
+        if S==22:
+            S=12
+    
         dicoScores[e]=S
 
     return dicoScores

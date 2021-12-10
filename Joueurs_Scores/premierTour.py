@@ -1,4 +1,4 @@
-import initScores
+from Joueurs_Scores import initScores
 from Paquet import piocheCarte, valeurCarte
 
 

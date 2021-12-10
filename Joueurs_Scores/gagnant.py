@@ -19,15 +19,3 @@ def gagnant(scores):
             c=e
         e+=1
     return (y[c],maxx)
-#Il manque une condition quand 1 joueur reste sur la table c'est lui qui à gagné
-
-
-
-#def Gagnant(dicoScores):
-    t=0
-    for e in dicoScores:
-        if dicoScores[e]>t:
-            winner=dicoScores[e]
-        t=dicoScores[e]
-
-    return winner

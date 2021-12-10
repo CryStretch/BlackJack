@@ -1,4 +1,4 @@
-import tourJoueur
+from TourJoueur import tourJoueur
 
 def tourComplet(listeJoueur,dicoScore,p):
     for j in listeJoueur:

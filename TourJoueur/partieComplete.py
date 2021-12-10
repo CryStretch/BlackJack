@@ -1,4 +1,4 @@
-import premierTour,partieFinie,tourComplet
+from TourJoueur import premierTour,partieFinie,tourComplet
 from Joueurs_Scores import gagnant
 
 
@@ -15,5 +15,3 @@ def partieComplete(listeJoueur,p,dicoVictoire):
     dicoVictoire[winner]+=1
     
     return dicoVictoire
-
-#si mec pioche 2 as à 11 il joue avec 22

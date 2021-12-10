@@ -11,7 +11,7 @@ def tourJoueur(j,paquet, dicoScores, listeJoueur):
 
     if condition==True:
         carte=piocheCarte(paquet,1)
-        nb=valeurCarte(carte[0])
+        nb=valeurCarte(carte[0],j)
         score=nb+score
 
         if score==21:
